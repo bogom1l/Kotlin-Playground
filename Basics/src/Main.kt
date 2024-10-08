@@ -1,8 +1,9 @@
 fun main() {
     val n: Int = 5
+    val q = 2
 
-    println(updateNumber(n, ::incrementNumber))
-    println(updateNumber(n, ::decrementNumber))
+    println(updateNumber(q, ::incrementNumber))
+    println(updateNumber(q, ::decrementNumber))
 }
 
 fun updateNumber(number: Int, operation: (Int) -> Int): Int {
