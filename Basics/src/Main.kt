@@ -1,12 +1,16 @@
 fun main() {
+    val n: Int = 5
 
-    println(updateDirty(15, ::increaseDirty))
-
+    println(updateNumber(n, ::incrementNumber))
+    println(updateNumber(n, ::decrementNumber))
 }
 
-fun updateDirty(dirty: Int, operation: (Int) -> Int): Int {
-    return operation(dirty)
+fun updateNumber(number: Int, operation: (Int) -> Int): Int {
+    return operation(number)
 }
 
-fun increaseDirty( start: Int ) = start + 1
+fun incrementNumber(number: Int) = number + 1
 
+fun decrementNumber(number: Int): Int {
+    return number - 1
+}
