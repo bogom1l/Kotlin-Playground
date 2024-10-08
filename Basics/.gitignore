@@ -1,30 +1,19 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
-/.idea/
+.idea/
+*.iml
+build/
+*.log
+*.tmp
+.gradle/
+**/build/
+**/out/
+*.jar
+*.war
+local.properties
+*.hprof
+*.DS_Store
+*.class
+*.swp
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
