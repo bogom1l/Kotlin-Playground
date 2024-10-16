@@ -1,3 +1,4 @@
+/*
 typealias Dollars = Double
 typealias Percentage = Double
 
@@ -59,3 +60,5 @@ class SavingsAccount(owner: String, balance: Dollars, val annualInterestRate: Pe
 }
 
 data class Check(val amount: Dollars)
+
+*/

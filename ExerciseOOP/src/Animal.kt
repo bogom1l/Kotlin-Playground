@@ -1,4 +1,4 @@
-open class Animal(val age: Int, val gender: String) {
+/*open class Animal(val age: Int, val gender: String) {
 
     open fun isMammal(): Boolean {
         return false
@@ -45,3 +45,4 @@ class Zebra(age: Int, gender: String, val is_wild: Boolean) : Animal(age, gender
         println("Zebra is running")
     }
 }
+ */

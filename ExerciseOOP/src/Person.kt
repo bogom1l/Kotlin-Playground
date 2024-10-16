@@ -1,3 +1,4 @@
+/*
 interface Person{
     val firstName: String
     val lastName: String
@@ -19,3 +20,4 @@ class Student(val major: String, override val firstName: String, override val la
     }
 }
 
+*/
