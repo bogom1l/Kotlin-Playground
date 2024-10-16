@@ -1,4 +1,4 @@
-import kotlin.math.pow
+import kotlin.math.*
 
 interface Expense {
     fun calculate(): Double
@@ -63,7 +63,6 @@ class FreightWagon : Wagon() {
 }
 
 class Town(val name: String, val postalCode: String) {
-    //getName() returns error?
     fun getTrainName(): String {
         return name
     }
@@ -80,12 +79,13 @@ class Coordinate(val longitude: Double, val latitude: Double) {
         val dLon = Math.toRadians(coordinate.longitude - longitude)
         val dLat = Math.toRadians(coordinate.latitude - latitude)
 
-        val a = Math.sin(dLat / 2).pow(2.0) +
-                Math.cos(Math.toRadians(latitude)) * Math.cos(Math.toRadians(coordinate.latitude)) *
-                Math.sin(dLon / 2).pow(2.0)
+        val a = sin(dLat / 2).pow(2.0) +
+                cos(Math.toRadians(latitude)) * Math.cos(Math.toRadians(coordinate.latitude)) *
+                sin(dLon / 2).pow(2.0)
 
-        val c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-        return radiusOfEarth * c // Distance in kilometers
+        val c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+        return radiusOfEarth * c
     }
 }
 
@@ -103,20 +103,19 @@ class Station(val name: String, val town: Town, val coordinate: Coordinate) {
     }
 }
 
-// Class for Train
 class Train(val locomotive: Locomotive, val wagons: HashSet<Wagon>) : Expense {
-    lateinit var startStation: Station
-    lateinit var endStation: Station
+    private var startStation: Station? = null
+    private var endStation: Station? = null
 
     fun getTrainType(): LocomotiveType {
         return locomotive.getType()
     }
 
-    fun getTrainStartStation(): Station {
+    fun getTrainStartStation(): Station? {
         return startStation
     }
 
-    fun getTrainEndStation(): Station {
+    fun getTrainEndStation(): Station? {
         return endStation
     }
 
@@ -126,7 +125,17 @@ class Train(val locomotive: Locomotive, val wagons: HashSet<Wagon>) : Expense {
     }
 
     override fun calculate(): Double {
-        return locomotive.calculate() + wagons.size * 1.5 // Example calculation, assuming each wagon adds to the cost
+        val locomotivePrice = (locomotive.calculate() + locomotive.calculate() * wagons.size)
+
+        val startCoordinate = startStation?.getStationCoordinate()
+        val endCoordinate = endStation?.getStationCoordinate()
+
+        if (startCoordinate != null && endCoordinate != null) {
+            val distance = startCoordinate.getDistance(endCoordinate)
+            return locomotivePrice * distance
+        } else {
+            return 0.0
+        }
     }
 }
 

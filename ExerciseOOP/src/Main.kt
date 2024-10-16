@@ -63,29 +63,27 @@ fun main() {
     println(lecturer.work())
  */
 
-    // Create locomotive instances
     val electricLocomotive = ElectricLocomotive()
     val steamLocomotive = SteamLocomotive()
     val dieselLocomotive = DieselLocomotive()
 
-    // Create wagon instances
     val passengerWagon = PassengerWagon()
     val freightWagon = FreightWagon()
 
-    // Create a town and a station
     val town = Town("Springfield", "12345")
     println(town.getTrainName())
     val coordinate = Coordinate(70.0, 40.0)
     val station = Station("Central Station", town, coordinate)
 
-    // Create a train with a locomotive and wagons
     val wagons = hashSetOf<Wagon>(passengerWagon, freightWagon)
     val train = Train(electricLocomotive, wagons)
 
-    // Set start and end stations
+    println(train.getTrainEndStation())
+
     train.setStations(station, station)
 
-    // Output some information
+    println(train.getTrainEndStation())
+
     println("Train Type: ${train.getTrainType()}")
     println("Total Cost: ${train.calculate()}")
 
