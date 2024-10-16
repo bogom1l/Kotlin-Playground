@@ -1,3 +1,4 @@
+/*
 typealias Dollars = Double
 
 // Enum for Job Titles
@@ -33,3 +34,5 @@ data class Student(override val firstName: String, override val lastName: String
         println("$firstName $lastName is studying $major.")
     }
 }
+
+*/
