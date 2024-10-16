@@ -5,7 +5,6 @@ open class Animal(val age: Int, val gender: String) {
     }
 
     open fun mate() {}
-
 }
 
 class Duck(age: Int, gender: String, val beakColor: String = "Yellow") : Animal(age, gender) {
@@ -20,6 +19,10 @@ class Duck(age: Int, gender: String, val beakColor: String = "Yellow") : Animal(
 
     fun quack() {
         println("Duck is quacking")
+    }
+
+    override fun mate() {
+        println("Duck is mating")
     }
 }
 
