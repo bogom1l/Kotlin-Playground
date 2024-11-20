@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">KontrolnoTest2</string>
+
+    <string name="dobro_utro">Добро утро</string>
+    <string name="enter_name">Въведи името си:</string>
+    <string name="whats_your_name">Как се казваш?</string>
+
+    <string name="nachalo">Начало</string>
+    <string name="pokaji">Покажи</string>
+    <string name="error_message">Невалидно въведени данни</string>
+
+    <string name="enter_email">Какъв е твоя емайл?</string>
+    <string name="enter_phone">Какъв е твоя телефон?</string>
+    <string name="enter_address">Какъв е твоя уеб адрес?</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_second">nz</string>
+</resources>
