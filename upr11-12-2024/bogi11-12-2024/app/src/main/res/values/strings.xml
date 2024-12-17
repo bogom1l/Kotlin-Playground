@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pmiu_exam3</string>
+    <string name="greeting">dobre doshli</string>
+    <string name="title_activity_data">DataActivity</string>
+</resources>

@@ -1,0 +1,3 @@
+nachgalen ekran s vizualizirane - dobre doshli i pod nego krugul progres indikator.
+3 sec sled startirane na activity-to da se otvori 2ro aktivity v koeto prez 2 sek 
+da se dobawqt w spisyk izobrajeniq
